@@ -1,4 +1,4 @@
-##Major Cloud Provider Comparison##
+# Major Cloud Provider Comparison #
 
 Cloud service providers offer similar infrastructure capabilities, but each platform has its own service names, technologies, and features. This comparison examines four essential infrastructure components: **Compute, Storage, Networking, and Identity and Access Management (IAM)**.
 
