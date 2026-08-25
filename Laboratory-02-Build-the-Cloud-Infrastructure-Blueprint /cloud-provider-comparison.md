@@ -1,4 +1,3 @@
-
 # Checkpoint 4 – Major Cloud Provider Comparison
 
 Cloud service providers offer similar infrastructure capabilities, but each platform has its own service names, technologies, and features. This comparison examines four essential infrastructure components: **Compute, Storage, Networking, and Identity and Access Management (IAM)**.
@@ -59,9 +58,9 @@ The three cloud providers offer comparable core infrastructure services, includi
 
 # Official Documentation References
 
-* **AWS Documentation** – AWS official documentation
-* **Microsoft Azure Documentation** – Microsoft Learn Azure documentation
-* **Google Cloud Documentation** – Google Cloud official documentation
+* **AWS Documentation** – [AWS Official Documentation](https://docs.aws.amazon.com/)
+* **Microsoft Azure Documentation** – [Microsoft Learn – Azure Documentation](https://learn.microsoft.com/en-us/azure/)
+* **Google Cloud Documentation** – [Google Cloud Official Documentation](https://cloud.google.com/docs)
 
 ---
 
