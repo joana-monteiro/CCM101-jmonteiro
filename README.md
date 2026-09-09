@@ -20,5 +20,9 @@ The activities included exploring a Linux cloud server using the KillerCoda Play
 
 Through this laboratory, I further developed my knowledge of **Linux system administration, cloud infrastructure, technical documentation, Git, and GitHub**.
 
+### Laboratory Activity 3 — Become a Multi-Cloud Explorer
+
+Laboratory Activity 3 centered on exploring **AWS, Microsoft Azure, and Google Cloud Platform (GCP)**. The activities included **comparing different cloud services, examining a Linux-based cloud server, and learning about cloud migration and the use of multi-cloud environments**.
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
