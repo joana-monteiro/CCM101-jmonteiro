@@ -24,5 +24,9 @@ Through this laboratory, I further developed my knowledge of **Linux system admi
 
 Laboratory Activity 3 centered on exploring **AWS, Microsoft Azure, and Google Cloud Platform (GCP)**. The activities included **comparing different cloud services, examining a Linux-based cloud server, and learning about cloud migration and the use of multi-cloud environments**.
 
+### Laboratory Activity 4 — The Cloud-Native Engineer
+
+Laboratory Activity 4 introduced the fundamentals of Docker and containerization. The activities included examining the differences between Virtual Machines and containers, practicing essential Docker commands, setting up an Nginx web server, and learning how to manage the complete
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
