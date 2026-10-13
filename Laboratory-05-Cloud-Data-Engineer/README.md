@@ -2,7 +2,7 @@
 
 <br>
 
-## 🎯 Mission Overview
+## Mission Overview
  
 Congratulations! Your seamless deployment of containerized web servers has caught the attention of 
 the senior architects. You have now been temporarily reassigned to the **Cloud Data Engineering Team** at 
@@ -21,7 +21,7 @@ deploy a live object storage server, create a storage "bucket," and upload data 
 
 ---
 
-## 📋 Objectives
+## Objectives
 
 By completing this laboratory activity, I was able to:
 
