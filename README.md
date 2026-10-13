@@ -28,5 +28,9 @@ Laboratory Activity 3 centered on exploring **AWS, Microsoft Azure, and Google C
 
 Laboratory Activity 4 introduced the fundamentals of Docker and containerization. The activities included examining the differences between Virtual Machines and containers, practicing essential Docker commands, setting up an Nginx web server, and learning how to manage the complete
 
+### Laboratory Activity 5 — The Cloud Data Engineer
+
+Laboratory 5 focused on understanding **Cloud Storage and Object Storage**. The activities included comparing Block, File, and Object Storage, deploying an S3-compatible storage service using Docker, creating a storage bucket, uploading files through the web console, and documenting the deployment process.
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
