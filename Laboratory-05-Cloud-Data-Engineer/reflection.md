@@ -1,1 +1,9 @@
+# Mission Reflection
 
+Throughout these checkpoints, I learned a lot about cloud computing and the different ways of storing data. At first, some topics were difficult for me to understand, especially the differences between block, file, and object storage. However, as I continued the activities, I gradually understood how each type works and when it should be used. I also learned that object storage is useful for storing large amounts of files, such as photos and videos.
+
+One of the most challenging parts for me was Checkpoint 5, where I had trouble downloading the official MinIO images in my KillerCoda environment. At first, I felt frustrated because the commands did not work as expected. Instead of giving up, I tried using `pgsty/minio` as an alternative so I could continue the activity. This experience taught me to be patient, try different solutions, and learn from the problems I encounter.
+
+I also gained hands-on experience using Docker commands, running containers, mapping ports, and configuring environment variables. Creating the `client-photos` bucket and uploading sample files helped me understand how object storage works in real situations. I also realized that keeping files private and protecting passwords are important parts of managing data.
+
+Overall, this laboratory activity helped me improve my technical skills and become more confident in using the Linux terminal and working with cloud technologies. I know that I still have many things to learn, but I am happy with the progress I have made. As an IT student, I believe the knowledge and experience I gained from these activities will help me with my future projects and career. I will continue practicing, exploring new technologies, and improving my problem-solving skills so I can become a more capable IT professional.
