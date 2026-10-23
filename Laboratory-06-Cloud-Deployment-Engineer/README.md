@@ -1,139 +1,142 @@
-#  Laboratory 6: The Cloud Deployment Engineer
+# Laboratory 6 — The Cloud Deployment Engineer
 
-<br>
+## Mission Overview
 
-##  Mission Overview
+Laboratory Activity 6 focuses on deploying multi-container applications using Docker Compose and applying Infrastructure as Code (IaC) principles. The activity builds on previous container deployment exercises by introducing a more practical architecture in which a web application communicates with a separate database service.
 
-Congratulations! Your flawless work in deploying data storage solutions has earned you a spot on the Cloud Deployment Team at CloudNova Technologies.
+During this laboratory, I configured a private cloud storage application using Nextcloud and MariaDB. Instead of managing each container individually, I used a `docker-compose.yml` file to define the application services, their configurations, and their communication requirements. Docker Compose was then used to deploy and manage the entire application stack through a single command.
 
-Up until now, you have been deploying single containers (like a standalone web server or a storage bucket). However, real-world enterprise applications are rarely just one container. They are "multi-tier" systems that require a frontend web application communicating seamlessly with a backend database. Deploying these one by one manually is prone to error.
+This activity demonstrates how infrastructure configuration can simplify deployment, improve consistency, and reduce errors associated with manually managing multiple containers.
 
-Enter Docker Compose. In this mission, you will transition from manual commands to Infrastructure as Code (IaC). Using a YAML configuration file, you will define a multi-container private cloud storage application (Nextcloud and MariaDB) and deploy the entire stack simultaneously with a single command!
+## Objectives
 
-> Remember: A junior engineer deploys servers by typing commands; a senior engineer deploys infrastructure by writing code.
+By completing this laboratory activity, I aimed to achieve the following objectives:
 
-<br>
-
-##  Objectives
-
-At the end of this laboratory activity, you should be able to:
-
-- Explain the concept of a multi-tier application architecture.
-- Understand the purpose and structure of a docker-compose.yml file.
-- Use a Linux command-line text editor (nano) to create configuration files.
-- Deploy a multi-container application (Nextcloud + Database) using Docker Compose.
-- Document deployment procedures and Infrastructure as Code (IaC) principles using Markdown.
-- Continue expanding your professional GitHub Cloud Computing Portfolio.
-
----
+- Understand the structure and purpose of multi-tier application architecture.
+- Explain the role of the `docker-compose.yml` file in defining application services.
+- Create and edit configuration files using the Nano text editor in Linux.
+- Deploy and manage a multi-container application using Docker Compose.
+- Understand the fundamental principles of Infrastructure as Code (IaC).
+- Document deployment procedures, configuration details, and verification results using Markdown.
+- Expand my GitHub Cloud Computing Portfolio with technical documentation and laboratory evidence.
 
 ## Commands Executed
 
-The following commands were used to configure, deploy, verify, and remove the application services.
+The following commands were used to prepare the project directory, configure the application, deploy the services, verify their status, and clean up the deployment.
 
-| Command | Description |
+| Command | Purpose |
 |---|---|
-| `mkdir nextcloud-deployment` | Creates a directory for the deployment project. |
-| `cd nextcloud-deployment` | Navigates to the project directory. |
-| `nano docker-compose.yml` | Opens the text editor to create or edit the configuration file. |
-| `cat docker-compose.yml` | Displays the configuration file for verification. |
-| `docker-compose up -d` | Creates and starts the defined services in the background. |
-| `docker-compose ps` | Displays the current status of the containers. |
-| `docker-compose down` | Stops and removes the containers and the default project network. |
-
----
+| `mkdir nextcloud-deployment` | Creates a dedicated directory for the Nextcloud deployment project. |
+| `cd nextcloud-deployment` | Changes the current working directory to the deployment project. |
+| `nano docker-compose.yml` | Opens Nano to create or modify the Docker Compose configuration file. |
+| `cat docker-compose.yml` | Displays the saved configuration for inspection and verification. |
+| `docker-compose up -d` | Creates and starts the services defined in the configuration file in detached mode. |
+| `docker-compose ps` | Displays the status of the containers associated with the deployment. |
+| `docker-compose down` | Stops and removes the project's containers and default network. |
 
 ## Application Architecture
 
-The deployment uses a two-tier architecture consisting of a web application and a database service.
+The application uses a two-tier architecture consisting of a web application layer and a database layer. These components operate in separate containers and communicate through a Docker network.
 
 ```text
-             USER
-               |
-               v
-          WEB BROWSER
-               |
-          Port 8080
-               |
-               v
-     +---------------------+
-     |    NEXTCLOUD APP    |
-     |    Service: app     |
-     +---------------------+
-               |
-       Private Docker Network
-               |
-               v
-     +---------------------+
-     |       MARIADB       |
-     |  Service: database  |
-     +---------------------+
-               |
-          Port 3306
-        Internal Network
+                 USER
+                   |
+                   v
+              WEB BROWSER
+                   |
+             Host Port 8080
+                   |
+                   v
+       +------------------------+
+       |      NEXTCLOUD         |
+       |    Service: app        |
+       |    Web Application     |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       |   PRIVATE DOCKER       |
+       |       NETWORK          |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       |       MARIADB          |
+       |  Service: database     |
+       |     Database Layer     |
+       +------------------------+
+                   |
+              Internal Port
+                  3306
 ```
 
-**How the architecture operates:**
+### Architecture Components
 
-- **Web tier:** Nextcloud provides the user interface and processes application requests.
-- **Database tier:** MariaDB stores the structured information required by Nextcloud.
-- **Container networking:** Docker Compose enables Nextcloud to communicate with MariaDB through the service name `database`.
-- **Port configuration:** Nextcloud is accessible through the host's published port `8080`, while MariaDB is not directly exposed through a host-published port.
-
----
+- **Web application layer:** Nextcloud provides the interface through which users access the cloud storage application and interact with its features.
+- **Database layer:** MariaDB stores the structured application data required by Nextcloud.
+- **Container networking:** Docker Compose connects the application services through a shared network, allowing Nextcloud to communicate with the database using the service name `database`.
+- **Port configuration:** The Nextcloud service is accessible through host port `8080`. MariaDB uses its internal database port, `3306`, without requiring a host-published port.
+- **Service isolation:** Separating the web application and database into individual containers improves organization and allows each service to be managed independently.
 
 ## Deployment Evidence
 
-This section documents the main stages of the laboratory activity. The corresponding screenshots can be inserted in the spaces provided below.
+This section describes the major stages of the deployment process. Actual terminal screenshots should be inserted under the corresponding figure descriptions to provide evidence of the commands executed and their results.
 
-### 1. Creating the Configuration File
+### 1. Creating the Docker Compose Configuration
 
-I used the `nano` text editor to create and configure the `docker-compose.yml` file containing the Nextcloud and MariaDB service definitions.
+I created the `docker-compose.yml` file using the Nano text editor. The file defines the Nextcloud and MariaDB services, including their required configurations and deployment settings.
 
-**Figure 1.** Creating the Docker Compose configuration using the nano editor.
+**Figure 1.** Creating the Docker Compose configuration file using Nano.
 
-### 2. Verifying the Configuration
+### 2. Reviewing the Configuration File
 
-After saving the file, I used the `cat` command to review its contents and check whether the YAML structure and indentation were correct.
+After editing and saving the configuration, I executed the `cat` command to inspect the file contents. This step helped me review the YAML structure, service definitions, and indentation before deploying the application.
 
-**Figure 2.** Inspecting the saved configuration in the terminal.
+**Figure 2.** Reviewing the saved Docker Compose configuration in the terminal.
 
-### 3. Deploying the Containers
+### 3. Deploying and Verifying the Containers
 
-I executed `docker-compose up -d` to start the application services and used `docker-compose ps` to check the status of the containers.
+I used `docker-compose up -d` to create and start the services in the background. After deployment, I executed `docker-compose ps` to examine the container status and determine whether the services were running as expected.
 
-**Figure 3.** Starting the services and verifying their container status.
+**Figure 3.** Deploying the application stack and checking the container status.
 
 ### 4. Accessing the Nextcloud Interface
 
-After deployment, I opened the Nextcloud setup page through the configured web port to verify that the application interface was accessible.
+Once the deployment was running, I accessed the Nextcloud setup page through the configured host port `8080`. This verification step helped confirm that the web application interface was reachable through the browser.
 
-**Figure 4.** Accessing the Nextcloud setup page through port 8080.
+**Figure 4.** Accessing the Nextcloud setup interface through port 8080.
 
-### 5. Removing the Deployment
+### 5. Cleaning Up the Deployment
 
-After completing the verification process, I ran `docker-compose down` to stop and remove the containers and the default network created for the project.
+After completing the deployment and accessibility checks, I executed `docker-compose down` to stop and remove the project containers and the default network. This step demonstrated how Docker Compose simplifies the removal of resources associated with a multi-container application.
 
-**Figure 5.** Stopping and removing the deployed containers and network.
-
----
+**Figure 5.** Stopping and removing the deployed containers and project network.
 
 ## Skills and Knowledge Acquired
 
 | Skill | Learning Outcome |
 |---|---|
-| Docker Compose | Learned to manage multiple containers using a shared configuration file. |
-| YAML | Practiced creating configuration files with proper formatting and indentation. |
-| Application Deployment | Learned to start, inspect, and remove containerized services. |
-| Container Networking | Understood how services communicate using Docker Compose service names. |
-| Security | Learned the importance of restricting database exposure and protecting credentials. |
-| Troubleshooting | Practiced checking container status and verifying application accessibility. |
-| Technical Documentation | Improved my ability to document deployment procedures and supporting evidence using Markdown. |
-
----
+| Docker Compose | Learned how to define, deploy, and manage multiple containerized services through a single configuration file. |
+| YAML Configuration | Practiced creating structured configuration files with correct syntax and indentation. |
+| Application Deployment | Gained experience starting, inspecting, and removing containerized applications. |
+| Container Networking | Understood how Docker Compose services communicate through service names within a shared network. |
+| Security Practices | Learned the importance of limiting database exposure and protecting sensitive credentials. |
+| Troubleshooting | Practiced examining container status and checking application accessibility to identify potential deployment issues. |
+| Infrastructure as Code | Understood how declarative configuration files make infrastructure deployment more consistent and repeatable. |
+| Technical Documentation | Improved my ability to prepare organized Markdown reports and document laboratory procedures with supporting evidence. |
 
 ## Mission Status
 
-**Completed activities:** Docker Compose configuration, multi-container deployment, application accessibility verification, container cleanup, and technical documentation.
+The laboratory activity covers the creation of the Docker Compose configuration, deployment of the Nextcloud and MariaDB containers, verification of application accessibility, cleanup of deployed resources, and preparation of technical documentation.
 
-*Cloud Computing Laboratory 6 — Developing practical skills in infrastructure automation, container management, and cloud application deployment.*
+Successful completion should be supported by actual terminal output and screenshots confirming each relevant stage of the deployment process.
+
+## Conclusion
+
+Laboratory Activity 6 provided practical experience in deploying and managing a multi-container application using Docker Compose. Through the integration of Nextcloud and MariaDB, I gained a clearer understanding of how web applications and database services operate together within a containerized environment.
+
+The activity also introduced the benefits of Infrastructure as Code, particularly the ability to define application configurations, deploy services consistently, and manage multiple containers efficiently. In addition, I learned the importance of container networking, database isolation, configuration validation, and deployment verification.
+
+These skills will support my future cloud computing projects and strengthen my understanding of container orchestration concepts, infrastructure automation, and cloud application deployment.
+
+*Cloud Computing Laboratory 6 — Building practical skills in Infrastructure as Code, container management, and multi-service application deployment.*
