@@ -1,8 +1,8 @@
-# 🐳☁️ Laboratory 6: The Cloud Deployment Engineer
+#  Laboratory 6: The Cloud Deployment Engineer
 
 <br>
 
-## 🎯 Mission Overview
+##  Mission Overview
 
 Congratulations! Your flawless work in deploying data storage solutions has earned you a spot on the Cloud Deployment Team at CloudNova Technologies.
 
@@ -14,7 +14,7 @@ Enter Docker Compose. In this mission, you will transition from manual commands 
 
 <br>
 
-## 📋 Objectives
+##  Objectives
 
 At the end of this laboratory activity, you should be able to:
 
