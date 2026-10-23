@@ -32,5 +32,9 @@ Laboratory Activity 4 introduced the fundamentals of Docker and containerization
 
 Laboratory 5 focused on understanding **Cloud Storage and Object Storage**. The activities included comparing Block, File, and Object Storage, deploying an S3-compatible storage service using Docker, creating a storage bucket, uploading files through the web console, and documenting the deployment process.
 
+### Laboratory Activity 6 — The Cloud Deployment Engineer
+
+Laboratory 6 focused on understanding **Docker Compose and Multi-Tier Application Deployment**. The activities included researching two-tier architecture, configuring Nextcloud and MariaDB containers, establishing communication through a Docker network, mapping ports to access the web application, deploying and verifying container services, and documenting the deployment process.
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
