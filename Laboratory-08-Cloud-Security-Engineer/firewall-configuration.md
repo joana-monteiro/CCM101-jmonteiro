@@ -1,8 +1,8 @@
-# Checkpoint 6 - Firewall Configuration Report
+# Checkpoint 6 – Firewall Configuration Report
 
 ## Overview
 
-This report documents the UFW firewall settings applied to protect the `secure-web-app` Nginx container during Laboratory Activity 8. The configuration uses a Default Deny policy for incoming connections while allowing SSH access for server administration and permitting TCP traffic on the designated port used by the web application.
+This report presents the UFW firewall configuration implemented to secure the `secure-web-app` Nginx container during Laboratory Activity 8. The setup follows a **Default Deny** approach for incoming connections while allowing SSH for remote server administration and permitting TCP traffic on port `8080` for web application access.
 
 ## 1. Commands Executed
 
@@ -12,64 +12,64 @@ This report documents the UFW firewall settings applied to protect the `secure-w
 sudo ufw allow ssh
 ```
 
-**Purpose:** Allows SSH connections so administrators can access and manage the server remotely.
+**Purpose:** Permits SSH connections, enabling administrators to remotely access and manage the server.
 
-### Set the Default Firewall Policies
+### Configure the Default Firewall Policies
 
 ```bash
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 ```
 
-**Purpose:** Rejects incoming connections unless they are permitted by an explicit rule, while allowing outgoing network traffic by default.
+**Purpose:** Blocks incoming connections unless explicitly permitted by a firewall rule while allowing outgoing network traffic by default.
 
-### Activate the Firewall
+### Enable the Firewall
 
 ```bash
 sudo ufw enable
 ```
 
-**Purpose:** Enables UFW and applies the configured firewall policies and rules.
+**Purpose:** Activates UFW and applies the configured default policies and firewall rules.
 
-### Check the Firewall Configuration
+### Verify the Firewall Status
 
 ```bash
 sudo ufw status verbose
 ```
 
-**Purpose:** Shows whether the firewall is active, displays its default policies, and lists the configured rules with additional details.
+**Purpose:** Displays the firewall's current status, default security policies, configured rules, and additional configuration details.
 
-### Permit Web Application Traffic
+### Allow Web Application Traffic
 
 ```bash
 sudo ufw allow 8080/tcp
 ```
 
-**Purpose:** Allows incoming TCP connections through port `8080`, which is designated for accessing the web application.
+**Purpose:** Permits incoming TCP traffic on port `8080`, allowing connections to the web application through its designated port.
 
-### View Numbered Firewall Rules
+### Display Numbered Firewall Rules
 
 ```bash
 sudo ufw status numbered
 ```
 
-**Purpose:** Displays the firewall rules in a numbered list, making it easier to review, identify, and manage individual entries.
+**Purpose:** Lists the configured firewall rules with assigned numbers, making it easier to inspect, identify, and manage individual rules.
 
-### Verify Web Application Accessibility
+### Test Web Application Accessibility
 
 ```bash
 curl -i http://localhost:8080
 ```
 
-**Purpose:** Sends an HTTP request to the web application published on the local host and displays the response headers along with the returned content.
+**Purpose:** Sends an HTTP request to the web application through the local host and displays the response headers and content to help verify its availability.
 
 ---
 
 ## 2. Importance of Allowing SSH Before Enabling UFW
 
-Allowing SSH before activating UFW is an important precaution when managing a remote server. If the firewall is enabled while incoming SSH connections are blocked, an administrator could lose remote access and might need an alternative method to regain control of the machine.
+Configuring the SSH rule before activating UFW is an essential precaution when administering a remote server. Enabling the firewall without first permitting SSH could block remote administrative connections and potentially lock the administrator out of the system.
 
-Configuring the SSH rule beforehand helps preserve administrative connectivity while the remaining firewall settings are applied.
+By establishing the SSH permission in advance, administrators can maintain remote access while applying the remaining firewall configurations.
 
 ---
 
@@ -87,6 +87,6 @@ Configuring the SSH rule beforehand helps preserve administrative connectivity w
 
 ## 4. Security Summary
 
-The UFW configuration strengthens server security by restricting incoming network connections and permitting only the services required for administration and web application access. Applying a Default Deny policy helps reduce unnecessary exposure to external connections.
+The UFW configuration improves server security by controlling incoming network traffic and allowing only the connections required for remote administration and web application access. The Default Deny policy minimizes unnecessary network exposure by blocking incoming connections that do not match an explicitly permitted rule.
 
-To confirm that the configuration is working as intended, I should inspect the firewall status, review the numbered rules, and test the web application's accessibility. Actual terminal screenshots should be included as evidence that the firewall settings were applied and verified successfully.
+To validate the configuration, the firewall status and numbered rules should be inspected, and the web application's accessibility should be tested. Actual terminal screenshots should also be provided as supporting evidence to demonstrate that the firewall rules were configured and verified successfully.
