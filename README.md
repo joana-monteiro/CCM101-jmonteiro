@@ -44,5 +44,9 @@ Laboratory 7 focused on understanding **Cloud Operations, System Monitoring, and
 
 Laboratory 8 focused on understanding **Cloud Security, Firewall Configuration, and Infrastructure Protection**. The activities included identifying potential security risks, examining network access rules, configuring the UFW firewall, implementing a default-deny policy for incoming traffic, allowing authorized SSH connections, permitting TCP traffic on port 8080 for the web application, verifying firewall configurations, testing application accessibility, and documenting security settings and laboratory results.
 
+### Laboratory Activity 9 — The Cloud Automation Engineer
+
+Laboratory 9 focused on understanding **Cloud Automation, Infrastructure as Code (IaC), and Automated Deployment**. The activities included exploring automation tools, creating scripts to simplify repetitive administrative tasks, automating system configuration and application deployment, executing commands to manage cloud resources, verifying automated processes, troubleshooting configuration issues, and documenting automation procedures and laboratory results.
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
