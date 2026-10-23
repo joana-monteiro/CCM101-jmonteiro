@@ -36,5 +36,9 @@ Laboratory 5 focused on understanding **Cloud Storage and Object Storage**. The 
 
 Laboratory 6 focused on understanding **Docker Compose and Multi-Tier Application Deployment**. The activities included researching two-tier architecture, configuring Nextcloud and MariaDB containers, establishing communication through a Docker network, mapping ports to access the web application, deploying and verifying container services, and documenting the deployment process.
 
+### Laboratory Activity 7 — The Cloud Operations Engineer
+
+Laboratory 7 focused on understanding **Cloud Operations, System Monitoring, and Performance Management**. The activities included monitoring system resources, checking CPU and memory utilization, analyzing disk usage, deploying and testing an Nginx web server, generating simulated website traffic, inspecting application logs, monitoring container performance, and documenting system health and operational results.
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
