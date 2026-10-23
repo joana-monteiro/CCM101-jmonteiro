@@ -40,5 +40,9 @@ Laboratory 6 focused on understanding **Docker Compose and Multi-Tier Applicatio
 
 Laboratory 7 focused on understanding **Cloud Operations, System Monitoring, and Performance Management**. The activities included monitoring system resources, checking CPU and memory utilization, analyzing disk usage, deploying and testing an Nginx web server, generating simulated website traffic, inspecting application logs, monitoring container performance, and documenting system health and operational results.
 
+### Laboratory Activity 8 — The Cloud Security Engineer
+
+Laboratory 8 focused on understanding **Cloud Security, Firewall Configuration, and Infrastructure Protection**. The activities included identifying potential security risks, examining network access rules, configuring the UFW firewall, implementing a default-deny policy for incoming traffic, allowing authorized SSH connections, permitting TCP traffic on port 8080 for the web application, verifying firewall configurations, testing application accessibility, and documenting security settings and laboratory results.
+
 **This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
 
