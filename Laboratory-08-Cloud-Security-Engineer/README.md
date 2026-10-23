@@ -1,19 +1,18 @@
-
 # Laboratory 08 — The Cloud Security Engineer
 
 ## Mission Overview
 
-This laboratory activity focuses on protecting a Linux server using UFW (Uncomplicated Firewall). The tasks include deploying an Nginx web application, examining firewall rules, applying a Default Deny policy, and permitting only the network services necessary for the application to operate.
+This laboratory activity focuses on securing a Linux server through UFW (Uncomplicated Firewall). The tasks involve running an Nginx web application, reviewing existing firewall configurations, implementing a Default Deny policy, and allowing only the network connections required for server administration and application access.
 
 ## Objectives
 
-- Understand the Principle of Least Privilege and its role in server security.
-- Recognize the potential attack surface of a virtual machine.
-- Examine the server's existing network access settings.
-- Apply a Default Deny policy using UFW.
-- Permit SSH connections for remote server administration.
-- Allow TCP traffic on port 8080 for the web application.
-- Record the configuration process and organize the results in a professional GitHub portfolio.
+- Learn the Principle of Least Privilege and its importance in protecting servers.
+- Identify potential security risks and attack surfaces associated with a virtual machine.
+- Inspect the server's current network access configuration.
+- Configure UFW to block incoming connections by default.
+- Enable SSH access for remote server management.
+- Permit TCP connections on port 8080 for the web application.
+- Document the implementation process and present the results in a well-organized GitHub portfolio.
 
 ## Tools and Technologies
 
@@ -29,39 +28,38 @@ This laboratory activity focuses on protecting a Linux server using UFW (Uncompl
 
 | Command | Purpose |
 |---|---|
-| `docker --version` | Verifies that Docker is installed and available. |
-| `docker ps` | Displays the currently running containers. |
-| `curl -i http://localhost:8080` | Checks the accessibility of the locally hosted web application. |
-| `sudo ufw allow ssh` | Creates a rule permitting SSH connections. |
-| `sudo ufw default deny incoming` | Sets incoming network traffic to be denied by default. |
-| `sudo ufw default allow outgoing` | Allows outgoing network connections by default. |
-| `sudo ufw enable` | Activates the UFW firewall. |
-| `sudo ufw status verbose` | Displays the firewall's current status, policies, and rules. |
-| `sudo ufw allow 8080/tcp` | Permits incoming TCP connections on port 8080. |
-| `sudo ufw status numbered` | Lists firewall rules with their corresponding numbers. |
+| `docker --version` | Checks the installed Docker version to confirm its availability. |
+| `docker ps` | Lists the containers that are currently running. |
+| `curl -i http://localhost:8080` | Tests whether the locally hosted web application can be accessed and displays its HTTP response. |
+| `sudo ufw allow ssh` | Adds a firewall rule to permit SSH connections. |
+| `sudo ufw default deny incoming` | Configures the firewall to block incoming connections by default. |
+| `sudo ufw default allow outgoing` | Sets outgoing network connections to be allowed by default. |
+| `sudo ufw enable` | Turns on the UFW firewall and applies its configured rules. |
+| `sudo ufw status verbose` | Shows the firewall status, default policies, and active rules in detail. |
+| `sudo ufw allow 8080/tcp` | Adds permission for incoming TCP traffic on port 8080. |
+| `sudo ufw status numbered` | Displays firewall rules with their corresponding numbers for easier management. |
 
 ## Screenshots and Evidence
 
 | Evidence File | Description |
 |---|---|
-| `vulnerable-app-running.png` | Captures the running Nginx container and a successful HTTP response. |
-| `firewall-activated.png` | Shows the enabled UFW firewall and its default policies. |
-| `firewall-port-allowed.png` | Displays the numbered firewall rules and the web application connectivity test. |
+| `vulnerable-app-running.png` | Shows the active Nginx container and evidence of a successful HTTP response. |
+| `firewall-activated.png` | Captures the enabled UFW firewall and its configured default policies. |
+| `firewall-port-allowed.png` | Presents the numbered firewall rules and the results of the web application connectivity test. |
 
-All screenshots are organized in the `screenshots/` directory for convenient access and review.
+All screenshots are stored in the `screenshots/` directory to keep the laboratory evidence organized and accessible for review.
 
 ## Skills Acquired
 
-- Applying fundamental server security practices.
-- Establishing and managing host-based firewall rules.
-- Controlling network access through specific ports.
-- Deploying and testing applications running inside Docker containers.
-- Preparing structured technical documentation using Markdown.
-- Maintaining an organized GitHub repository for laboratory activities and project evidence.
+- Implementing basic Linux server security measures.
+- Configuring and maintaining host-based firewall rules.
+- Managing network access by controlling specific ports.
+- Deploying and testing Docker-based web applications.
+- Creating clear and structured technical reports using Markdown.
+- Organizing laboratory documentation and supporting evidence in a GitHub repository.
 
 ## Mission Completion
 
-The laboratory activity is considered complete once the firewall has been configured and its settings verified, the required documentation has been prepared, all three screenshots have been uploaded, and the changes have been committed to the GitHub repository.
+This laboratory activity is considered complete when the UFW firewall has been properly configured, its status and rules have been verified, the technical documentation has been prepared, all three required screenshots have been uploaded, and the completed changes have been committed to the GitHub repository.
 
-**Note:** All documented results and screenshots must accurately reflect the commands executed and the actual output obtained in the laboratory environment.
-
+**Note:** All descriptions, command results, and screenshots must correspond to the actual commands executed and the output observed in the laboratory environment.
