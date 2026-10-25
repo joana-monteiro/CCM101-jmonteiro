@@ -2,64 +2,45 @@
 
 ## Mission Overview
 
-This laboratory activity focuses on securing a Linux server through UFW (Uncomplicated Firewall). The tasks involve running an Nginx web application, reviewing existing firewall configurations, implementing a Default Deny policy, and allowing only the network connections required for server administration and application access.
+Laboratory Activity 08 focuses on securing an Ubuntu server using UFW (Uncomplicated Firewall). The activity involves running an Nginx web application through Docker, checking network connectivity, and configuring firewall rules to restrict unauthorized access while allowing essential services.
 
 ## Objectives
 
-- Learn the Principle of Least Privilege and its importance in protecting servers.
-- Identify potential security risks and attack surfaces associated with a virtual machine.
-- Inspect the server's current network access configuration.
-- Configure UFW to block incoming connections by default.
-- Enable SSH access for remote server management.
-- Permit TCP connections on port 8080 for the web application.
-- Document the implementation process and present the results in a well-organized GitHub portfolio.
+- Understand the Principle of Least Privilege.
+- Inspect running containers and existing firewall settings.
+- Apply a default-deny policy for incoming connections.
+- Allow SSH for remote administration and TCP port 8080 for web access.
+- Verify firewall rules and document the results in GitHub.
 
 ## Tools and Technologies
 
 - Ubuntu Linux
-- Docker
-- Nginx Web Server
+- Docker and Nginx
 - UFW Firewall
 - cURL
-- Markdown
-- GitHub
+- Markdown and GitHub
 
 ## Commands Executed
 
-| Command | Purpose |
-|---|---|
-| `docker --version` | Checks the installed Docker version to confirm its availability. |
-| `docker ps` | Lists the containers that are currently running. |
-| `curl -i http://localhost:8080` | Tests whether the locally hosted web application can be accessed and displays its HTTP response. |
-| `sudo ufw allow ssh` | Adds a firewall rule to permit SSH connections. |
-| `sudo ufw default deny incoming` | Configures the firewall to block incoming connections by default. |
-| `sudo ufw default allow outgoing` | Sets outgoing network connections to be allowed by default. |
-| `sudo ufw enable` | Turns on the UFW firewall and applies its configured rules. |
-| `sudo ufw status verbose` | Shows the firewall status, default policies, and active rules in detail. |
-| `sudo ufw allow 8080/tcp` | Adds permission for incoming TCP traffic on port 8080. |
-| `sudo ufw status numbered` | Displays firewall rules with their corresponding numbers for easier management. |
-
-## Screenshots and Evidence
-
-| Evidence File | Description |
-|---|---|
-| `vulnerable-app-running.png` | Shows the active Nginx container and evidence of a successful HTTP response. |
-| `firewall-activated.png` | Captures the enabled UFW firewall and its configured default policies. |
-| `firewall-port-allowed.png` | Presents the numbered firewall rules and the results of the web application connectivity test. |
-
-All screenshots are stored in the `screenshots/` directory to keep the laboratory evidence organized and accessible for review.
+| Command                           | Purpose                                                     |
+| --------------------------------- | ----------------------------------------------------------- |
+| `docker --version`                | Verifies Docker installation.                               |
+| `docker ps`                       | Checks running containers.                                  |
+| `curl -i http://localhost:8080`   | Tests Nginx connectivity and HTTP response.                 |
+| `sudo ufw allow ssh`              | Permits SSH connections for remote management.              |
+| `sudo ufw default deny incoming`  | Blocks incoming connections unless explicitly allowed.      |
+| `sudo ufw default allow outgoing` | Allows outgoing connections by default.                     |
+| `sudo ufw enable`                 | Activates the firewall.                                     |
+| `sudo ufw status verbose`         | Verifies firewall status and policies.                      |
+| `sudo ufw allow 8080/tcp`         | Allows access to the web application through TCP port 8080. |
+| `sudo ufw status numbered`        | Lists firewall rules for verification and management.       |
 
 ## Skills Acquired
 
-- Implementing basic Linux server security measures.
-- Configuring and maintaining host-based firewall rules.
-- Managing network access by controlling specific ports.
-- Deploying and testing Docker-based web applications.
-- Creating clear and structured technical reports using Markdown.
-- Organizing laboratory documentation and supporting evidence in a GitHub repository.
+This activity developed practical skills in Linux server security, firewall configuration, Docker container management, network access control, connectivity testing, and technical documentation using Markdown.
 
 ## Mission Completion
 
-This laboratory activity is considered complete when the UFW firewall has been properly configured, its status and rules have been verified, the technical documentation has been prepared, all three required screenshots have been uploaded, and the completed changes have been committed to the GitHub repository.
+The mission is complete when the firewall is enabled, SSH and port 8080 access are configured, the rules and application connectivity are verified, and all required screenshots and documentation are committed to the GitHub repository.
 
-**Note:** All descriptions, command results, and screenshots must correspond to the actual commands executed and the output observed in the laboratory environment.
+**Security Note:** Configure and verify the SSH allow rule before enabling UFW on a remote server to avoid losing access. Only report results confirmed by actual command output and screenshots.
