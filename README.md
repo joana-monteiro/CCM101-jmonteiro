@@ -1,52 +1,71 @@
 # Cloud Computing Laboratory Portfolio
 
-Hello! My name is **Joana Mae Monteiro**.
+## About This Portfolio
 
-I am a student currently studying **Cloud Computing**. This repository serves as my laboratory portfolio, where I document and organize the activities and tasks I complete throughout the semester.
+Welcome to my Cloud Computing Laboratory Portfolio.
 
-It includes laboratory exercises, activities, screenshots, system information, and personal reflections related to my Cloud Computing course.
+My name is **Joana Mae Monteiro**, and I am a student studying Cloud Computing. This repository documents my learning progress, practical exercises, and technical achievements throughout the semester.
 
-## Portfolio Contents
+It contains laboratory activities, command-line exercises, deployment configurations, screenshots, technical documentation, and reflections that demonstrate my understanding of cloud technologies, Linux administration, containerization, infrastructure management, security, and automation.
+
+## Laboratory Activities
 
 ### Laboratory 01 — Welcome to the Cloud
 
-The first laboratory introduced the basic concepts of working with a **cloud-based Linux environment**. The activities covered essential Linux commands, system information gathering, file and directory management, Markdown documentation, and GitHub version control.
+Introduced the fundamentals of cloud-based Linux environments, including essential Linux commands, system information gathering, file and directory management, Markdown documentation, and GitHub version control.
 
 ### Laboratory 02 — Build the Cloud Infrastructure Blueprint
 
-The second laboratory focused on understanding the **fundamental components of cloud infrastructure** and how they work together within a cloud environment.
+Explored cloud infrastructure components using the KillerCoda Playground. Examined CPU, memory, storage, and network resources, designed a basic cloud architecture, and compared infrastructure services offered by AWS, Microsoft Azure, and Google Cloud.
 
-The activities included exploring a Linux cloud server using the KillerCoda Playground, examining CPU, memory, storage, and network resources, identifying key cloud infrastructure components, designing a basic cloud architecture, and comparing core infrastructure services from **Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)**.
+### Laboratory 03 — Become a Multi-Cloud Explorer
 
-Through this laboratory, I further developed my knowledge of **Linux system administration, cloud infrastructure, technical documentation, Git, and GitHub**.
+Investigated the services and capabilities of AWS, Microsoft Azure, and Google Cloud Platform (GCP). Explored cloud service comparisons, Linux-based cloud environments, cloud migration concepts, and the benefits of multi-cloud strategies.
 
-### Laboratory Activity 3 — Become a Multi-Cloud Explorer
+### Laboratory 04 — The Cloud-Native Engineer
 
-Laboratory Activity 3 centered on exploring **AWS, Microsoft Azure, and Google Cloud Platform (GCP)**. The activities included **comparing different cloud services, examining a Linux-based cloud server, and learning about cloud migration and the use of multi-cloud environments**.
+Studied containerization and Docker fundamentals, including the differences between virtual machines and containers, essential Docker commands, and the deployment and management of an Nginx web server.
 
-### Laboratory Activity 4 — The Cloud-Native Engineer
+### Laboratory 05 — The Cloud Data Engineer
 
-Laboratory Activity 4 introduced the fundamentals of Docker and containerization. The activities included examining the differences between Virtual Machines and containers, practicing essential Docker commands, setting up an Nginx web server, and learning how to manage the complete
+Explored cloud storage technologies, comparing block, file, and object storage. Deployed an S3-compatible storage service using Docker, created a storage bucket, uploaded files through the web console, and documented the deployment process.
 
-### Laboratory Activity 5 — The Cloud Data Engineer
+### Laboratory 06 — The Cloud Deployment Engineer
 
-Laboratory 5 focused on understanding **Cloud Storage and Object Storage**. The activities included comparing Block, File, and Object Storage, deploying an S3-compatible storage service using Docker, creating a storage bucket, uploading files through the web console, and documenting the deployment process.
+Practiced multi-tier application deployment using Docker Compose. Configured Nextcloud and MariaDB containers, established network communication, mapped application ports, and verified that the deployed services operated correctly.
 
-### Laboratory Activity 6 — The Cloud Deployment Engineer
+### Laboratory 07 — The Cloud Operations Engineer
 
-Laboratory 6 focused on understanding **Docker Compose and Multi-Tier Application Deployment**. The activities included researching two-tier architecture, configuring Nextcloud and MariaDB containers, establishing communication through a Docker network, mapping ports to access the web application, deploying and verifying container services, and documenting the deployment process.
+Explored system monitoring and performance management by examining CPU utilization, memory consumption, and disk usage. Deployed and tested an Nginx web server, generated sample traffic, inspected application logs, monitored container performance, and evaluated system health.
 
-### Laboratory Activity 7 — The Cloud Operations Engineer
+### Laboratory 08 — The Cloud Security Engineer
 
-Laboratory 7 focused on understanding **Cloud Operations, System Monitoring, and Performance Management**. The activities included monitoring system resources, checking CPU and memory utilization, analyzing disk usage, deploying and testing an Nginx web server, generating simulated website traffic, inspecting application logs, monitoring container performance, and documenting system health and operational results.
+Applied fundamental Linux server security practices using UFW. Reviewed network access rules, implemented a default-deny incoming policy, permitted SSH and TCP port 8080, verified firewall configurations, and tested web application connectivity.
 
-### Laboratory Activity 8 — The Cloud Security Engineer
+### Laboratory 09 — The Cloud Automation Engineer
 
-Laboratory 8 focused on understanding **Cloud Security, Firewall Configuration, and Infrastructure Protection**. The activities included identifying potential security risks, examining network access rules, configuring the UFW firewall, implementing a default-deny policy for incoming traffic, allowing authorized SSH connections, permitting TCP traffic on port 8080 for the web application, verifying firewall configurations, testing application accessibility, and documenting security settings and laboratory results.
+Developed practical skills in Linux automation using Bash scripting and Cron. Created a backup script, generated timestamped compressed archives, configured execution permissions, scheduled recurring backup tasks, and verified archive contents.
 
-### Laboratory Activity 9 — The Cloud Automation Engineer
+## Technical Skills Developed
 
-Laboratory 9 focused on understanding **Cloud Automation, Infrastructure as Code (IaC), and Automated Deployment**. The activities included exploring automation tools, creating scripts to simplify repetitive administrative tasks, automating system configuration and application deployment, executing commands to manage cloud resources, verifying automated processes, troubleshooting configuration issues, and documenting automation procedures and laboratory results.
+Throughout these laboratory activities, I gained practical experience in:
 
-**This portfolio will be updated regularly throughout the semester** as I complete additional laboratory activities, checkpoints, exercises, and related technical tasks.
+- **Cloud Platforms:** AWS, Microsoft Azure, and Google Cloud Platform.
+- **Linux Administration:** Command-line operations, file management, permissions, and system monitoring.
+- **Containerization:** Docker, Docker Compose, container networking, and Nginx deployment.
+- **Cloud Storage:** Object storage concepts, bucket management, and S3-compatible services.
+- **Cloud Security:** UFW firewall configuration and network access control.
+- **Automation:** Bash scripting, Cron scheduling, and automated backups.
+- **Technical Documentation:** Markdown, screenshots, Git, and GitHub repository management.
 
+## Repository Organization
+
+Laboratory files are organized by activity to make documentation, scripts, configurations, and supporting screenshots easier to navigate and review.
+
+Each laboratory entry documents the relevant objectives, procedures, commands, implementation details, and results where applicable.
+
+## Continuous Learning
+
+This portfolio represents my ongoing development in Cloud Computing. As I progress through the semester, I will continue updating the repository with completed laboratory activities, practical exercises, checkpoints, technical documentation, and new skills.
+
+My goal is to strengthen my practical understanding of cloud infrastructure, deployment, security, operations, and automation while building a professional record of my technical development.
