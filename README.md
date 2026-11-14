@@ -46,6 +46,10 @@ Applied fundamental Linux server security practices using UFW. Reviewed network 
 
 Developed practical skills in Linux automation using Bash scripting and Cron. Created a backup script, generated timestamped compressed archives, configured execution permissions, scheduled recurring backup tasks, and verified archive contents.
 
+### Laboratory 10 — The Enterprise Cloud Architect
+
+Designed and deployed a multi-tier cloud application using Ubuntu Server, Docker, and Docker Compose. Configured interconnected application and database containers, implemented persistent storage, secured network access using UFW, and automated administrative tasks through Bash scripting and Cron. Documented the system architecture, deployment procedures, security configurations, and maintenance processes.
+
 ## Technical Skills Developed
 
 Throughout these laboratory activities, I gained practical experience in:
