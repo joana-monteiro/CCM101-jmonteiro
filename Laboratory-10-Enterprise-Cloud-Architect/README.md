@@ -186,14 +186,6 @@ The following checklist can be used to evaluate and record whether the required 
 - [ ] Cron has been configured and the scheduled task has been tested.
 - [ ] The architecture diagram and operational manual are included in the project repository.
 
-## Troubleshooting Notes
-
-Document the technical difficulties experienced during project development, their possible causes, and the corresponding solutions applied.
-
-| Issue Encountered | Possible Cause | Solution Applied |
-|---|---|---|
-| [Describe the issue] | [Identify the possible cause] | [Provide the solution] |
-| [Describe the issue] | [Identify the possible cause] | [Provide the solution] |
 
 ## Acknowledgment
 
@@ -201,6 +193,3 @@ This project was completed as part of the laboratory requirements for CCM101 –
 
 All configurations, implementation procedures, testing outcomes, and supporting screenshots included in this repository should reflect the actual setup and results of the deployed system.
 
----
-
-**Submission Reminder:** Before submitting the project, review the entire repository and replace all remaining placeholders with the correct details from your implementation. Remove any instructions, configurations, or testing statements that are not applicable to your actual project deployment.
